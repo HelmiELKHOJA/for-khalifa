@@ -1,0 +1,76 @@
+
+
+body{
+  background:rgb(146,189,231);
+  color:#485e74;
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding:20px;
+}
+
+  .container {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+
+.ilmawdhou3{
+  background:#C8E6FE;
+}
+
+.ilmawdhou3 h3, .ilmawdhou3 ul{
+  text-align: left;
+  margin:0 0 20px 0;
+}
+
+.Chbechyekteb{
+  background:#f9feff;
+}
+
+
+.Chbechyekteb form{
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-gap:20px;
+}
+
+
+
+.Chbechyekteb form p{
+  margin:10px;
+}
+
+
+
+.Chbechyekteb form button, .Chbechyekteb form input, .Chbechyekteb form textarea{
+  width:74%;
+  padding:1em;
+  border:1px solid #c9e6ff;
+}
+
+.Chbechyekteb form button{
+  background:#c9e6ff;
+  border:0;
+  text-transform: uppercase;
+}
+
+.Chbechyekteb form button:hover,.Chbechyekteb form button:focus{
+  background:#92bde7;
+  color:#fff;
+  outline:0;
+  transition: background-color  ease-out;
+}
+
+
+
+  .wrapper{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    padding:2em;
+  }
+ 
+
+  h3, ul, {
+    text-align: left;
+  }

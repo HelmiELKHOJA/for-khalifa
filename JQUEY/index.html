@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Rich Text editor in JS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://use.fontawesome.com/db631d22de.js"></script>
+	<link rel="stylesheet"  href="css/style.css">
+
+</head>
+<body>
+	<div>
+		<button id="fontweight" ><i class="fa fa-bold"></i></button>
+		<button id="italic"><i class="fa fa-italic"></i></button>
+		<button id="ul"><i class="fa fa-underline"></i></button>
+
+		<label for="size"></label>
+		<select class="form-control" id="size">
+  		<option>4</option>
+  		<option>8</option>
+  		<option>12</option>
+  		<option>20</option>
+  		<option>30</option>
+  	</select>
+  	
+    <select id=font>
+			<option value="Arial">Arial</option>
+			<option value="Times New Roman">Times New Roman</option>
+			<option value="Comic Sans MS">Comic Sans MS</option>
+		</select>
+	</div>		
+	<p id="paragraph" style="width: 1000px; height: 500px;"> A7NA HAKKA WILLI TA7</p>
+
+<script>
+$("#fontweight").click(function(){
+        $("#paragraph").toggleClass("main");
+    });
+
+
+$("#italic").click(function(){
+        $("#paragraph").toggleClass("italic");
+    });
+
+$("#ul").click(function(){
+        $("#paragraph").toggleClass("underline");
+    });
+
+$("#size").change(function(){
+	size=$("#size").val();
+	$("#paragraph").css("font-size",size+"px");
+});
+
+
+$('#font').change(function(){
+	font=$("#font").val();
+	$("#paragraph").css("font-family",font);
+});
+
+</script>
+
+<!-- 
+<script>
+/*function myFunctionBold() {
+    var str = document.getElementById("paragraph").textContent;
+    var result = str.bold();
+    document.getElementById("paragraph").innerHTML = result;
+}*/
+
+/*
+function myFunctionItalic() {
+    var str = document.getElementById("paragraph").textContent;
+    var result = str.italics()
+    document.getElementById("paragraph").innerHTML = result;
+}
+function myFunctionUnder() {
+    document.querySelector("#paragraph").style.textDecoration="underline";
+
+}
+ 
+function changeSize(n) {
+    var s = document.getElementById('paragraph');
+    s.style.fontSize = n.value + 'px'
+}
+
+
+function myFunctionFontFamily(selectTag) {
+    var listValue = selectTag.options[selectTag.selectedIndex].text;
+    document.getElementById("paragraph").style.fontFamily = listValue;
+}
+ </script>
+-->
+</body>
+</html>

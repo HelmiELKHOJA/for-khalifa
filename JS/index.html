@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Rich Text editor in JS</title>
+	<script src="https://use.fontawesome.com/db631d22de.js"></script>
+</head>
+<body onload="enableEditMode ()";>
+	<div>
+
+	<button onclick="execCmd('bold');"><i class="fa fa-bold"></i></button>
+	<button onclick="execCmd('italic');"><i class="fa fa-italic"></i></button>
+	<button onclick="execCmd('underline');"><i class="fa fa-underline"></i></button>
+
+	
+	<select onchange="execCmdWithArg ('fontName', this.value);">
+		<option value="Arial">Arial</option>
+		<option value="Times New Roman">Times New Roman</option>
+		<option value="Comic Sans MS">Comic Sans MS</option>
+			
+
+	</select>
+	<select onchange="execCmdWithArg ('fontSize', this.value);">
+		<option value="10">10</option>
+		<option value="20">20</option>
+		<option value="30">30</option>
+		<option value="40">40</option>
+	</select>	
+	</div>		
+	<iframe name="paragraph" style="width: 1000px; height: 500px;"></iframe>
+	
+	<script type="text/javascript">
+		function enableEditMode () {
+		paragraph.document.designMode ='On';
+		}
+		//permets d'éditer le text
+		function execCmd (command){
+		paragraph.document.execCommand (command, false, null);
+		}
+		//remise à 0 des User interface (false) et valeur 0
+		//syntax du DOM: document.execCommand(command, showUI, value)
+		// si <button onclick="execCmd('bold');" n'est pas ....
+		//ici on n'a pas utiliser getelementbyID car on a juste un iframe ou paragraphe à éditer
+		//donc paragraph.DOM 
+		function execCmdWithArg (command, arg){
+		paragraph.document.execCommand(command, false, arg);
+		}
+
+
+	</script>
+
+
+</body>
+</html>
+
